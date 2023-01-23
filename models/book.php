@@ -13,6 +13,7 @@
         public $title;
         public $author;
         public $discription;
+        public $image;
         public $price;
         public $inventory;
       
