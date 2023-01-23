@@ -9,9 +9,12 @@
 
         // Columns
         public $id;
-        public $first_name;
-        public $last_name;
-        public $email_id;
+        public $isbn;
+        public $title;
+        public $author;
+        public $discription;
+        public $price;
+        public $inventory;
       
         // Database Connection
         public function __construct($connection){
