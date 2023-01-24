@@ -10,15 +10,15 @@
 
     $data = json_decode(file_get_contents('php://input'), true);
 
-        \Stripe\Stripe::setApiKey('sk_test_51MND5gKoOKXyGCYuQic8DkuI3pIRZ3gUYHtwO7IE4U6UdOBYsZfxkDKL6vec4nomchqioECr1miivcateaNTbxKS0093a6YYqx');
+        \Stripe\Stripe::setApiKey('sk_test_51MTY23AY66r0SMmONUS2tdspEh5dUU33zybX498LdsbQLswv1M2IfGESb9Za8TujALAeQ324NBIqciCABB1iIFSD00sWP76lE6');
         
-        $public_key_for_js="pk_test_51MND5gKoOKXyGCYuJMbwP5hV8wuibN9R3nGMLPJWu44LG6egap9tuQ53W4fMsTil61AaPmoRuGpXUsymfMlLYGi200ZDLuStVK"; 
+        $public_key_for_js="pk_test_51MTY23AY66r0SMmOkTcIxapEM39UMngZijrH1DWtscD2zuLlpiXMOS9KVhZnJPNFRMVGZ1GgBEOKsEIqspVRKx6700nFiXJd1Z"; 
     try {
         $session = \Stripe\Checkout\Session::create([
             'mode' => 'payment',
             'payment_method_types' => ['card'],
-            'success_url' => 'https://ivm108.informatik.htw-dresden.de/ewa/g19/shop/success?session_id=' . '{CHECKOUT_SESSION_ID}',
-            'cancel_url'  =>  'https://ivm108.informatik.htw-dresden.de/ewa/g19/shop/cancel?session_id=' . '{CHECKOUT_SESSION_ID}',
+            'success_url' => 'https://ivm108.informatik.htw-dresden.de/ewa/g17/success?session_id=' . '{CHECKOUT_SESSION_ID}',
+            'cancel_url'  =>  'https://ivm108.informatik.htw-dresden.de/ewa/g17/?session_id=' . '{CHECKOUT_SESSION_ID}',
             'line_items' => [$data],
         ]);
     } catch (\Stripe\Exception\ApiErrorException $e) {

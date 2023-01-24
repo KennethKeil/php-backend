@@ -23,7 +23,7 @@
     }
 
     function response($status,$status_message,$data)
-{
+    {
         header("HTTP/1.1 ".$status);
         header('Access-Control-Allow-Origin: *');
         
